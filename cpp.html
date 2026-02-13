@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming</title>
+    <link rel="stylesheet" href="cpp.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>C++ Tutorial</h1>
+            <ul>
+                <a href="#cpp-intro"><li>Introduction</li></a>
+                <a href="#cpp-syntax"><li>C++ Syntax</li></a>
+                <a href="#cpp-statements"><li>C++ Statements</li></a>
+                <a href="#cpp-output"><li>C++ Output</li></a>
+                <a href="#cpp-comments"><li>C++ Comments</li></a>
+                <a href="#cpp-variable"><li>C++ Variable</li></a>
+                <a href="#cpp-datatypes"><li>C++ Data Types</li></a>
+                <a href="#cpp-operator"><li>C++ Operator</li></a>
+                <a href="#cpp-ifElse"><li>if-else in C++</li></a>
+                <a href="#cpp-switch"><li>Switch case in C++</li></a>
+                <a href="#cpp-loops"><li>Loops in C++</li></a>
+                <a href="#cpp-arrays"><li>Arrays in C++</li></a>
+                <a href="#cpp-string"><li>String in C++</li></a>
+                <a href="#cpp-pointers"><li>Pointers in C++</li></a>
+                <a href="cpp_notes_quiz.php"><li>C++ Quiz</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cpp-intro">
+            <h2>Introduction Of C++</h2> <hr>
+            <div class="what">
+                <h3>What is C++?</h3>
+                <p>C++ is a cross-platform language that can be used to create high-performance applications.</p>
+                <p>C++ was developed by Bjarne Stroustrup, as an extension to the C language.</p>
+                <p>C++ gives programmers a high level of control over system resources and memory.</p>
+                <p>The language was updated 5 major times in 2011, 2014, 2017, 2020, and 2023 to C++11, C++14, C++17, C++20, and C++23.</p>
+            </div>
+
+            <div class="why">
+                <h3>Why use C++?</h3>
+                <p>C++ is one of the world's most popular programming languages.</p>
+                <p>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</p>
+                <p>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+                <p>C++ is portable and can be used to develop applications that can be adapted to multiple platforms.</p>
+                <p>C++ is fun and easy to learn!</p>
+                <p>As C++ is close to C, C# and Java, it makes it easy for programmers to switch to C++ or vice versa.</p>
+            </div>
+
+            <div class="diff_c-cpp">
+                <h3>Difference between C and C++</h3>
+                <p>C++ was developed as an extension of C, and both languages have almost the same syntax.</p>
+                <p>The main difference between C and C++ is that C++ supports classes and objects, while C does not.</p>
+            </div>
+        </section>
+        
+        <section id="cpp-syntax">
+            <h2>Syntax of C++</h2> <hr>
+
+            <div class="cpp-syntax">
+                <h3>C++ Syntax</h3>
+                <div class="example">
+                    <h5>C++ Syntax</h5>
+                    <code>
+                        #include -iostream-  (-- = <>)
+                        using namespace std;
+
+                        int main() {
+                        cout << "Hello World!";
+                        return 0;
+                        } 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <div class="syntax-explain">
+                    <h3>Example explained</h3>
+                    <p>Line 1: #include <iostream> is a header file library that lets us work with input and output objects, such as cout (used in line 5). Header files add functionality to C++ programs.</p>
+                    <p>Line 2: using namespace std means that we can use names for objects and variables from the standard library.</p>
+                    <p>Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.</p>
+                    <p>Line 4: Another thing that always appear in a C++ program is int main(). This is called a function. Any code inside its curly brackets {} will be executed.</p>
+                    <p>Line 5: cout (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text. In our example, it will output "Hello World!".</p>
+                    <p>Note: C++ is case-sensitive: "cout" and "Cout" has different meaning.</p>
+                    <p>Note: Every C++ statement ends with a semicolon ;.</p>
+                    <p>Note: The body of int main() could also been written as:
+                    int main () { cout << "Hello World! "; return 0; }</p>
+                    <p>Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.</p>
+                    <p>Line 6: return 0; ends the main function.</p>
+                    <p>Line 7: Do not forget to add the closing curly bracket } to actually end the main function.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-statements">
+            <h2>Statements in C++</h2> <hr>
+
+            <div class="cpp-statements">
+                <h3>C++  Statements</h3>
+                <p>A computer program is a list of "instructions" to be "executed" by a computer.</p>
+                <p>In a programming language, these programming instructions are called statements. </p>
+                <p>The following statement "instructs" the compiler to print the text "Hello World" to the screen:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        cout << "Hello World!";
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+                <p>It is important that you end the statement with a semicolon ;</p>
+                <p>If you forget the semicolon (;), an error will occur and the program will not run:</p>
+            </div>
+
+            <div class="cpp-multiStatements">
+                <h3>Many Statements</h3>
+                <p>Most C++ programs contain many statements.</p>
+                <p>The statements are executed, one by one, in the same order as they are written:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        cout << "Hello World!";
+                        cout << "Have a good day!";
+                        return 0;
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <h3>Example explained</h3>
+                <p>From the example above, we have three statements:</p>
+                <ol type="1">
+                    <li>cout << "Hello World!";</li>
+                    <li>cout << "Have a good day!";</li>
+                    <li>return 0;</li>
+                </ol>
+
+                <p>The first statement is executed first (print "Hello World!" to the screen).</p>
+                <p>Then the second statement is executed (print "Have a good day!" to the screen).</p>
+                <p>And at last, the third statement is executed (end the C++ program successfully).</p>
+            </div>
+        </section>
+
+        <section id="cpp-output">
+            <h2>C++ Outputs</h2> <hr>
+            
+            <div class="printText">
+                <h3>C++ Output (Print Text)</h3>
+                <p>The cout object, together with the << operator, is used to output values and print text.</p>
+                <p>Just remember to surround the text with double quotes (""):</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        #include -iostream- (-- = <>)
+                        using namespace std;
+
+                        int main() {
+                        cout << "Hello World!";
+                        return 0;
+                        } 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <p>You can add as many cout objects as you want. However, note that it does not insert a new line at the end of the output:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        #include <iostream>
+                        using namespace std;
+
+                        int main() {
+                        cout << "Hello World!";
+                        cout << "I am learning C++";
+                        return 0;
+                        } 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="print-number">
+                <h3>C++ print numbers</h3>
+                <p>You can also use cout() to print numbers.</p>
+                <p>However, unlike text, we don't put numbers inside double quotes:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        #include <iostream>
+                        using namespace std;
+
+                        int main() {
+                        cout << 3;
+                        return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-comments">
+            <h2>C++ Comments</h2> <hr>
+
+            <h3>C++ Comments</h3>
+            <p>Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.</p>
+
+            <div class="single-line">
+                <h3>Single Line Comments</h3>
+                <p>Single-line comments start with two forward slashes (//).</p>
+                <p>Any text between // and the end of the line is ignored by the compiler (will not be executed).</p>
+                <p>This example uses a single-line comment before a line of code:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        // This is a comment
+                        cout << "Hello World!"; 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+                <p>This example uses a single-line comment at the end of a line of code:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        cout << "Hello World!"; // This is a comment 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="mutli-line">
+                <h3>C++ Multi line Comments</h3>
+                <p>Multi-line comments start with /* and ends with */.</p>
+                <p>Any text between /* and */ will be ignored by the compiler:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        /* The code below will print the words Hello World!
+                        to the screen, and it is amazing */
+                        cout << "Hello World!"; 
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-variable">
+            <h2>C++ Variables</h2> <hr>
+
+            <div class="var-intro">
+                <h3>C++ Variables</h3>
+                <p>Variables are containers for storing data values.</p>
+                <p>In C++, there are different types of variables (defined with different keywords), for example:</p>
+                <ul>
+                    <li>int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                    <li>double - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                    <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                    <li>string - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+                    <li>bool - stores values with two states: true or false</li>
+                </ul>
+            </div>
+
+            <div class="create-var">
+                <h3>Creating variables</h3>
+                <p>Creating a variable and giving it a name is called variable definition (sometimes called variable declaration). The syntax of variable definition is:</p>
+
+                <div class="example">
+                    <code>type name;</code> or <code>type name1, name2, name3 ....;</code>
+                </div>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>int num;</code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="inilialize-var">
+                <h3>Initializing variables</h3>
+                <p>A variable that is just defined may not contain some valid value. We have to initialize it to some valid initial value. It is done by using an assignment operator = as shown:</p>
+
+                <div class="example">
+                    <h5>Example</h5>
+                    <code>
+                        int num;
+                        num = 3;
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="access-update">
+                <h3>Accessing and Updating variables</h3>
+                <p>The main objective of a variable is to store the data so that it can be retrieved or update any time. Accessing can be done by simply using its assigned name and updating the value using = assignment operator.</p>
+                
+                <div class="example">
+                    <code>
+                        int num = 3;
+
+                        // Accessing and printing above variable
+                        cout << num << endl;
+
+                        // Update the value
+                        num = 7;
+                        cout << num;
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="rules-var">
+                <h3>Rules for naming variable</h3>
+                <p>The names given to a variable are called identifiers. There are some rules for creating these identifiers (names):</p>
+                <ul>
+                    <li>A name can only contain letters (A-Z or a-z), digits (0-9), and underscores (_).</li>
+                    <li>It should start with a letter or an underscore only.</li>
+                    <li>It is case sensitive.</li>
+                    <li>The name of the variable should not contain any whitespace and special characters (i.e. #, $, %, *, etc).</li>
+                    <li>We cannot use C++ keyword (e.g. float, double, class) as a variable name.</li>
+                </ul>
+            </div>
+
+            <div class="const-var">
+                <h3>Constant variable</h3>
+                <p>In C++, a constant variable is one whose value cannot be changed after it is initialized. This is done using the const keyword.</p>
+
+                <div class="example">
+                    <code>
+                        #include -iostream- (-- = <>)
+                        using namespace std;
+
+                        int main() {
+                        const int num = 10;
+                        cout << num;
+                        return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-datatypes">
+            <h2>C++ Data Types</h2> <hr>
+
+            <div class="intro-dataTypes">
+                <h3>Data Types in C+++</h3>
+                <p>Data types specify the type of data that a variable can store. Whenever a variable is defined in C++, the compiler allocates memory for that variable based on the data type with which it is declared. Please note that every may require a different amount of memory.</p>
+
+                <div class="example">
+                    <code>
+                        #include -iostream- (-- = <>)
+                        using namespace std;
+
+                        int main() {
+
+  	                    // Creating a variable to store integer
+                        int var = 10;
+  
+  	                    cout << var;
+                        return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+                <p>Explanation: In the above code, we needed to store the value 10 in our program, so we created a variable var. But before var, we have used the keyword 'int'. This keyword is used to define that the variable var will store data of type integer.</p>
+            </div>
+
+            <div class="types-dt">
+                <h3>Types of Data Types</h3>
+                <p>Let's see how to use some primitive data types in C++ program.</p>
+                <div class="char">
+                    <h3>Character Data Type (Char):-</h3>
+                    <p>The character data type is used to store a single character. The keyword used to define a character is char. Its size is 1 byte, and it stores characters enclosed in single quotes (' '). It can generally store upto 256 characters according to their ASCII codes.</p>
+
+                    <div class="example">
+                       <code>
+                            #include -iostream- (-- = <>)
+                            using namespace std;
+
+                            int main()
+                            {
+
+                                // Character variable
+                                char c = 'A';
+                                cout << c;
+
+                                return 0;
+                            }
+                       </code>
+                       <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="int">
+                    <h3>Integer Data Types (Int):-</h3>
+                    <p>Integer data type denotes that the given variable can store the integer numbers. The keyword used to define integers is int. Its size is 4-bytes (for 64-bit) systems and can store numbers for binary, octal, decimal and hexadecimal base systems in the range from -2,147,483,648 to 2,147,483,647.</p>
+
+                    <div class="example">
+                        <code>
+                            #include -iostream- (-- = <>    )
+                            using namespace std;
+
+                            int main()
+                            {
+
+                                // Creating an integer variable
+                                int x = 25;
+                                cout << x << endl;
+
+                                // Using hexadecimal base value
+                                x = 0x15;
+                                cout << x;
+
+                                return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="boolean">
+                    <h3>Boolean Data Types (Bool):-</h3>
+                    <p> The boolean data type is used to store logical values: true(1) or false(0). The keyword used to define a boolean variable is bool. Its size is 1 byte.</p>
+
+                    <div class="example">
+                        <code>
+                            #include -iostream- (-- = <>)
+                            using namespace std;
+
+                            int main()
+                            {
+
+                                // Creating a boolean variable
+                                bool isTrue = true;
+    
+                                cout << isTrue;
+                                return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="float">
+                    <h3>Floating Data Type (Flaot):-</h3>
+                    <p>Floating-point data type is used to store numbers with decimal points. The keyword used to define floating-point numbers is float. Its size is 4 bytes (on 64-bit systems) and can store values in the range from 1.2e-38 to 3.4e+38.</p>
+
+                    <div class="example">
+                        <code>
+                            #include -iostream- (-- = <>)
+                            using namespace std;
+
+                            int main()
+                            {
+
+                                // Floating point variable with a decimal value
+                                float f = 36.5;
+                                cout << f;
+
+                                return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="double">
+                    <h3>Double Data Type (Double):-</h3>
+                    <p>The double data type is used to store decimal numbers with higher precision. The keyword used to define double-precision floating-point numbers is double. Its size is 8 bytes (on 64-bit systems) and can store the values in the range from 1.7e-308 to 1.7e+308</p>
+
+                    <div class="example">
+                        <code>
+                            #include -iostream- (-- = <>)
+                            using namespace std;
+
+                            int main()
+                            {
+
+                                // double precision floating point variable
+                                double pi = 3.1415926535;
+                                cout << pi;
+
+                                return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-size">
+                <h3>Size of Data Types in C++</h3>
+                <p>Earlier, we mentioned that the size of the data types is according to the 64-bit systems. Does it mean that the size of C++ data types is different for different computers?</p>
+                <p>Actually, it is partially true. The size of C++ data types can vary across different systems, depending on the architecture of the computer (e.g., 32-bit vs. 64-bit systems) and the compiler being used. But if the architecture of the computer is same, then the size across different computers remains same.</p>
+                <p>We can find the size of the data type using sizeof operator. According to this type, the range of values that a variable of given data types can store are decided.</p>
+
+                <div class="example">
+                    <code>
+                        #include -iostream- (-- = <>)
+                        using namespace std;
+
+                        int main()
+                        {
+
+                            // Printing the size of each data type
+                            cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+                            cout << "Size of char: " << sizeof(char) << " byte" << endl;
+                            cout << "Size of float: " << sizeof(float) << " bytes" << endl;
+                            cout << "Size of double: " << sizeof(double) << " bytes";
+
+                            return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-operator">
+            <h2>Operators in C++</h2> <hr>
+
+            <div class="intro-op">
+                <h3>C++ Operators</h3>
+                <p>C++ operators are the symbols that operate on values to perform specific mathematical or logical computations on given values. They are the foundation of any programming language.</p>
+
+                <div class="example">
+                    <code>
+                        #include -iostream>- (-- = <>)
+                        using namespace std;
+                        int main() {
+  
+	                        int a = 10 + 20;
+  
+                            cout << a;
+                            return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="op-types">
+                <h3>Types of Operators</h3>
+                <p>C++ operators are classified into 6 types on the basis of type of operation they perform:</p>
+
+                <div class="arithmetic">
+                    <h3>Arithmetic Operators:-</h3>
+                    <p>Arithmetic operators are used to perform arithmetic or mathematical operations on the operands. For example, '+' is used for addition.</p>
+
+                    <ol type="1">
+                        <li>Addition, +, Adds two operands</li>
+                        <li>Subtraction, -, Subtracts second operand from the first</li>
+                        <li>Multiplication, *, Multiplies two operands</li>
+                        <li>Division, /, Divides first operand by the second operand</li>
+                        <li>Modulo Operation, %, Returns the remainder of an integer division</li>
+                        <li>Increment, ++, Increases the value of operand by 1</li>
+                        <li>Decrement, --, Decreases the value of operand by 1</li>
+                    </ol>
+
+                    <div class="example">
+                        <code>
+                            #include <iostream>
+                        using namespace std;
+
+                        int main() {
+                            int a = 8, b = 3;
+
+                            // Addition
+                            cout << "a + b = " << (a + b) << endl;
+  
+                            // Subtraction
+                            cout << "a - b = " << (a - b) << endl;
+  
+                            // Multiplication
+                            cout << "a * b = " << (a * b) << endl;
+  
+                            // Division
+                            cout << "a / b = " << (a / b) << endl;
+  
+                            // Modulo
+                            cout << "a % b = " << (a % b) << endl;
+  
+                            // Increament
+                            cout << "++a = " << ++a << endl;
+  
+                            // Decrement
+                            cout << "b-- = " << b--;
+    
+                            return 0;
+                        }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="relational">
+                    <h3>Relational Operators:-</h3>
+                    <p>Relational operators are used for the comparison of the values of two operands. For example, '>' check right operand is greater.</p>
+                    <ul>
+                        <li>Is Equal To, ==, Checks if both operands are equal</li>
+                        <li>Greater Than, >, Checks if the first operand is greater than the second operand</li>
+                        <li>Greater Than or Equal To, >=, Checks if the first operand is greater than or equal to the second operand</li>
+                        <li>Less Than, <, Checks if the first operand is lesser than the second operand</li>
+                        <li>Less Than or Equal To, <=, Checks if the first operand is lesser than or equal to the second operand</li>
+                        <li>Not Equal To, !=, Checks if both operands are not equal</li>
+                    </ul>
+
+                    <div class="example">
+                        <code>
+                            #include <iostream>
+                            using namespace std;
+
+                            int main() {
+                                int a = 6, b = 4;
+
+                                // Equal operator
+                                cout << "a == b is " << (a == b) << endl;
+  
+                                // Greater than operator
+                                cout << "a > b is " << (a > b) << endl;
+  
+                                // Greater than Equal to operator
+                                cout << "a >= b is " << (a >= b) << endl;
+                                
+                                //  Lesser than operator
+                                cout << "a < b is " << (a < b) << endl;
+  
+                                // Lesser than Equal to operator
+                                cout << "a <= b is " << (a <= b) << endl;
+  
+                                // Not equal to operator
+                                cout << "a != b is " << (a != b);
+
+                            return 0;
+                        }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="logical">
+                    <h3>Logical Operators:-</h3>
+                    <p>Logical operators are used to combine two or more conditions or constraints or to complement the evaluation of the original condition in consideration. The result returns a Boolean value, i.e., true or false.</p>
+                    <ul>
+                        <li>Logical AND, &&, Returns true only if all the operands are true or non-zero</li>
+                        <li>Logical OR, ||, Returns true if either of the operands is true or non-zero</li>
+                        <li>Logical NOT, !, Returns true if the operand is false or zero</li>
+                    </ul>
+
+                    <div class="example">
+                        <code>
+                            #include <iostream>
+                            using namespace std;
+
+                            int main() {
+                                int a = 6, b = 4;
+
+                                // Logical AND operator
+                                cout << "a && b is " << (a && b) << endl;
+  
+                                // Logical OR operator
+                                cout << "a || b is " << (a || b) << endl;
+  
+                                // Logical NOT operator
+                                cout << "!b is " << (!b);
+
+                                return 0;
+                            }
+                        </code>
+                        <p>Try on your own</p>
+                    </div>
+                </div>
+
+                <div class="bitwize">
+                    <h3>Bitwize Operators:-</h3>
+                    <p>Bitwise operators are works on bit-level. So, compiler first converted to bit-level and then the calculation is performed on the operands.</p>
+                    <ul>
+                        <li>Binary AND, &, Copies a bit to the result if it exists in both operands</li>
+                        <li>Binary OR, |, Copies a bit to the result if it exists in any of the operands</li>
+                        <li>Binary XOR, ^, Copies the bit to the result if it is present in either of the operands but not both</li>
+                        <li>Left Shift, <<, Shifts the value to the left by the number of bits specified by the right operand</li>
+                        <li>Right Shift, >>, Shifts the value to the right by the number of bits specified by the right operand</li>
+                        <li>One's Complement, ~, Changes binary digits 1 to 0 and 0 to 1</li>
+                    </ul>
+
+                    <div class="example">
+                        <code>
+                            #include <iostream>
+                        using namespace std;
+
+                        int main() {
+                            int a = 6, b = 4;
+
+                            // Binary AND operator
+                            cout << "a & b is " << (a & b) << endl;
+
+                            // Binary OR operator
+                            cout << "a | b is " << (a | b) << endl;
+
+                            // Binary XOR operator
+                            cout << "a ^ b is " << (a ^ b) << endl;
+
+                            // Left Shift operator
+                            cout << "a << 1 is " << (a << 1) << endl;
+
+                            // Right Shift operator
+                            cout << "a >> 1 is " << (a >> 1) << endl;
+
+                            // One’s Complement operator
+                            cout << "~(a) is " << ~(a);
+
+                            return 0;
+                        }
+                        </code>
+                        <p>Try Code on your own</p>
+                    </div>
+                </div>
+
+                <div class="assignment">
+                    <h3>Assignment Operators:-</h3>
+                    <p>Assignment operators are used to assign value to a variable. We assign the value of right operand into left operand according to which assignment operator we use.</p>
+                    <ul>
+                        <li>Assignment, =, Assigns the value on the right to the variable on the left</li>
+                        <li>Add and Assignment, +=, Adds the right operand to the left operand and assigns the result to the left operand</li>
+                        <li>Subtract and Assignment, -=, Subtracts the right operand from the left operand and assigns the result to the left operand</li>
+                        <li>Multiply and Assignment, *=, Multiplies the left operand by the right operand and assigns the result to the left operand</li>
+                        <li>Divide and Assignment, /=, Divides the left operand by the right operand and assigns the result to the left operand</li>
+                    </ul>
+
+                    <div class="example">
+                        <code>
+                            #include <iosteam>
+                            using namespace std;
+
+                            int main() {
+                                int a = 6, b = 4;
+
+                                // Assignment Operator.
+                                cout << "a = " << a << endl;
+  
+                                //  Add and Assignment Operator.
+                                cout << "a += b is " << (a += b) << endl;
+  
+                                // Subtract and Assignment Operator.
+                                cout << "a -= b is " << (a -= b) << endl;
+  
+                                //  Multiply and Assignment Operator.
+                                cout << "a *= b is " << (a *= b) << endl;
+  
+                                //  Divide and Assignment Operator.
+                                cout << "a /= b is " << (a /= b);
+
+                                return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="ternary">
+                    <h3>Ternary or Conditional Operators</h3>
+                    <p>Conditional operator returns the value, based on the condition. This operator takes three operands, therefore it is known as a Ternary Operator.</p>
+
+                    <div class="example">
+                        <h5>Syntax</h5>
+                        <code>Expression1 ? Expression2 : Expression3</code>
+                    </div>
+                    <p>In the above statement:</p>
+                    <ul>
+                        <li>The ternary operator ? determines the answer on the basis of the evaluation of Expression1.</li>
+                        <li>If Expression1 is true, then Expression2 gets evaluated.</li>
+                        <li>If Expression1 is false, then Expression3 gets evaluated.</li>
+                    </ul>
+
+                    <div class="example">
+                        <code>
+                            #include <iostream>
+                            using namespace std;
+
+                            int main() {
+                                int a = 3, b = 4;
+
+                                // Conditional Operator
+                                int result = (a < b) ? b : a;
+                                cout << "The greatest number "
+                                "is " << result;
+
+                            return 0;
+                        }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cpp-ifElse">
+            <h2>If - Else Statements in C++</h2> <hr>
+
+            <div class="intro-ifElse">
+                <h3>if-else Conditions in C++</h3>
+                <p>The if else in C++ is an extension of the if statement which not only allows the program to execute one block of code if a condition is true, but also a different block if the condition is false.</p>
+                <ul>
+                    <li>If the condition is true, then the code inside the if block is executed, otherwise the code inside the else block is executed.</li>
+                    <li>Any non-zero and non-null values are assumed to be true, and zero or null values are assumed to be false.</li>
+                </ul>
+            </div>
+
+            <div class="ifElse-types">
+                <div class="if">
+                    <h4>If...</h4>
+                    <p>Use the if statement to specify a block of code to be executed if a condition is true.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition) {
+                            // block of code to be executed if the condition is true
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="else">
+                    <h4>else...</h4>
+                    <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition) {
+                            // block of code to be executed if the condition is true
+                            } else {
+                            // block of code to be executed if the condition is false
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="nestedIf">
+                    <h4>nested-if</h4>
+                    <p>You can also place an if statement inside another if. This is called a nested if statement.</p>
+                    <p>A nested if lets you check for a condition only if another condition is already true.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition1) {
+                            // code to run if condition1 is true
+                                if (condition2) {
+                                    // code to run if both condition1 and condition2 are true
+                                }
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-switch">
+            <h2>C++ Switch Case</h2> <hr>
+
+            <div class="switch-intro">
+                <h3>Switch case in C++</h3>
+                <p>C++ switch statement is a conditional statement that allows you to execute different code blocks based on the value of a variable or an expression. It is often used in place of if-else ladder when there are multiple conditions.</p>
+                
+                <div class="example">
+                    <h6>Syntax</h6>
+                    <code>
+                        switch (expression) {
+                        case value1:
+                        // Code_block1
+                        break;
+
+                        case value2:
+                        // Code_block2
+                        break;
+
+                        default:
+                        // Default_code_block
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="switch-working">
+                <h3>Working of Switch Statements</h3>
+                <p>The working of the switch statement in C++ is as follows:</p>
+                <ul>
+                    <li><b>Step 1: </b>The switch variable is evaluated</li>
+                    <li><b>Step 2: </b>The evaluated value is matched against all the present cases.</li>
+                    <li><b>Step 3A: </b>The matching case value is found, the associated code is executed.</li>
+                    <li><b>Step 3B: </b>The matching code is not found, then the default case is executed if present.</li>
+                    <li><b>Step 4A: </b>The break keyword is present in the executed case, then program control breaks out of the switch statement after executing the code block associated with the first matching condition.</li>
+                    <li><b>Step 4B: </b>The break keyword is not present, then all the cases after the matching case are executed</li>
+                    <li><b>Step 5: </b>Statements after the switch statement are executed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="cpp-loops">
+            <h2>C++ Loops</h2> <hr>
+
+            <div class="loopIntro">
+                <h3>Loops in C++</h3>
+                <p>Loops in C++ programming are used to repeat a block of code until the specified condition is met. It allows programmers to execute a statement or group of statements multiple times without writing the code again and again.</p>
+
+                <div class="typesLoop">
+                    <h4>Types of Loops in C++</h4>
+                    <p>There are 3 looping statements in C++:</p>
+
+                    <div class="forLoop">
+                        <h3>For Loop</h3>
+                        <p>for loop is an entry-controlled loop, which means that the condition is checked before the loop's body executes.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                for (initialization; condition; updation) { 
+                                // body of for loop
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                        <p>The various parts of the for loop are:</p>
+                        <ul>
+                            <li><b>Initialization:</b> Initialize the variable to some initial value.</li>
+                            <li><b>Test Condition:</b> This specifies the test condition. If the condition evaluates to true, then body of the loop is executed. If evaluated false, loop is terminated.</li>
+                            <li><b>Update Expression:</b> After the execution loop’s body, this expression increments/decrements the loop variable by some value.</li>
+                        </ul>
+                    </div>
+
+                    <div class="whileLoop">
+                        <h3>While Loop</h3>
+                        <p>A while loop is also an entry-controlled loop in which the condition is checked before entering the body.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                while (condition) {
+                                // Body of the loop
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+
+                    <div class="do-whileLoop">
+                        <h3>Do-While Loop</h3>
+                        <p>The do-while loop is an exit-controlled loop, which means that the condition is checked after executing the loop body. Due to this, the loop body will execute at least once irrespective of the test condition.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                do {
+                                // Body of the loop
+                                } while (condition);
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+
+                    <div class="nestedLoop">
+                        <h3>Nested Loops</h3>
+                        <p>Nesting loops means placing one loop inside another. The inner loop runs fully for each iteration of the outer loop. This technique is helpful when you need to perform multiple iterations within each cycle of a larger loop, like when working with a two-dimensional array or performing tasks that require multiple levels of iteration.</p>
+                        
+                        <div class="example">
+                            <h6>Example</h6>
+                            <code>
+                                #include -stdio.h- (-- = <>)
+
+                                int main() {
+                                // Outer loop runs 3 times
+                                for (int i = 0; i < 3; i++) {
+        
+                                // Inner loop runs 2 times for each
+                                // outer loop iteration
+                                    for (int j = 0; j < 2; j++) {
+                                        printf("i = %d, j = %d\n", i, j);
+                                        }
+                                    }
+                                return 0;
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-arrays">
+            <h2>C++ Arrays</h2> <hr>
+
+            <div class="arrayIntro">
+                <h3>Arrays in C++</h3>
+                <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+                <p>To create an array, define the data type (like int) and specify the name of the array followed by square brackets []. </p>
+                <p>To insert values to it, use a comma-separated list inside curly braces, and make sure all values are of the same data type:</p>
+                
+                <div class="example">
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="accessEle">
+                <h3>Accessing Array Elements</h3>
+                <p>To access an array element, refer to its index number.</p>
+                <p>Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+                <p>This statement accesses the value of the first element [0] in myNumbers:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                        printf("%d", myNumbers[0]);
+
+                        // Outputs 25
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="changeEle">
+                <h3>Change Array Elements</h3>
+                <p>To change the value of a specific element, refer to the index number:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                        myNumbers[0] = 33;
+
+                        printf("%d", myNumbers[0]);
+
+                        // Now outputs 33 instead of 25
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="setSize">
+                <h3>Set Array Size</h3>
+                <p>Another common way to create arrays, is to specify the size of the array, and add elements later:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        // Declare an array of four integers:
+                        int myNumbers[4];
+
+                        // Add elements
+                        myNumbers[0] = 25;
+                        myNumbers[1] = 50;
+                        myNumbers[2] = 75;
+                        myNumbers[3] = 100;
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-string">
+            <h2>C++ Strings</h2> <hr>
+
+            <div class="stringIntro">
+                <h3>String</h3>
+                <p>Strings are used for storing text/characters.</p>
+                <p>For example, "Hello World" is a string of characters.</p>
+                <p>Unlike many other programming languages, C++ does not have a String type to easily create string variables. Instead, you must use the char type and create an array of characters to make a string in C++:</p>
+
+                <div class="example">
+                    <code>
+                        char greetings[] = "Hello World!";
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        printf("%s", greetings);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="accessStr">
+                <h3>Access String</h3>
+                <p>Since strings are actually arrays in C++, you can access a string by referring to its index number inside square brackets [].</p>
+                <p>This example prints the first character (0) in greetings:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        printf("%c", greetings[0]);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="modifyStr">
+                <h3>Modify String</h3>
+                <p>To change the value of a specific character in a string, refer to the index number, and use single quotes:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        greetings[0] = 'J'; 
+                        printf("%s", greetings);
+                        // Outputs Jello World! instead of Hello World!
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cpp-pointers">
+            <h2>C++ Pointers</h2> <hr>
+
+                <div class="ptrIntro">
+                <h3>Pointers in C++</h3>
+                <p>A pointer is a variable that stores the memory address of another variable. Instead of holding a direct value, it holds the address where the value is stored in memory. It is the backbone of low-level memory manipulation in C++.</p>
+                <ul>
+                    <li>A pointer is declared by specifying its data type and name, with an asterisk (*) before the name. Syntax: data_type *pointer_name;</li>
+                    <li>The data type indicates the type of variable the pointer can point to. For example, "int *ptr;" declares a pointer to an integer.</li>
+                    <li>Accessing the pointer directly will just give us the address that is stored in the pointer. To get the value at the address stored in a pointer variable, we use * operator which is call dereferencing operator in C++.</li>
+                    <li>Note that we use * for two different purposes in pointers. One is to declare a pointer variable and the other is in an operator to get the value stored at address stored in pointer.</li>
+                </ul>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myAge = 43; // an int variable
+
+                        printf("%d", myAge);  // Outputs the value of myAge (43)
+                        printf("%p", &myAge); // Outputs the memory address of myAge (0x7ffe5367e044)
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <p>A pointer is a variable that stores the memory address of another variable as its value.</p>
+                <p>A pointer variable points to a data type (like int) of the same type, and is created with the * operator.</p>
+                <p>The address of the variable you are working with is assigned to the pointer:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myAge = 43;     // An int variable
+                        int* ptr = &myAge;  // A pointer variable, with the name ptr, that stores the address of myAge
+
+                        // Output the value of myAge (43)
+                        printf("%d\n", myAge);
+
+                        // Output the memory address of myAge (0x7ffe5367e044)  
+                        printf("%p\n", &myAge);
+
+                        // Output the memory address of myAge with the pointer (0x7ffe5367e044)
+                        printf("%p\n", ptr);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

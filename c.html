@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C programming</title>
+    <link rel="stylesheet" href="c.css">
+    <link rel="stylesheet" href="cpp.html">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>C Tutorial</h1>
+            <ul>
+                <a href="#c-intro"><li>Introduction</li></a>
+                <a href="#c-syntax"><li>C Syntax</li></a>
+                <a href="#c-statements"><li>C Statements</li></a>
+                <a href="#c-output"><li>C Output</li></a>
+                <a href="#c-comments"><li>C Comments</li></a>
+                <a href="#c-variable"><li>C Variable</li></a>
+                <a href="#c-datatypes"><li>C Data Types</li></a>
+                <a href="#c-operator"><li>C Operator</li></a>
+                <a href="#c-ifElse"><li>if-else in C</li></a>
+                <a href="#c-switch"><li>Switch case in C</li></a>
+                <a href="#c-loops"><li>Loops in C</li></a>
+                <a href="#c-arrays"><li>Arrays in C</li></a>
+                <a href="#c-string"><li>String in C</li></a>
+                <a href="#c-pointers"><li>Pointers in C</li></a>
+                <a href="c_notes_quiz.php"><li>C Quiz</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="c-intro">
+            <h2>Introduction of C</h2> <hr>
+            <h3>What is C?</h3>
+            <article>
+                <ul>
+                    <li>C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.</li>
+                    <li>It is a very popular language, despite being old. The main reason for its popularity is because it is a fundamental language in the field of computer science.</li>
+                    <li>C is strongly associated with UNIX, as it was developed to write the UNIX operating system.</li>
+                </ul>
+            </article>
+            <hr>
+            <h3>Why to learn C?</h3>
+            <article>
+                <ul>
+                    <li>It is one of the most popular programming languages in the world</li>
+                    <li>If you know C, you will have no problem learning other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar</li>
+                    <li>If you know C, you will understand how computer memory works</li>
+                    <li>C is very fast, compared to other programming languages, like Java and Python</li>
+                    <li>C is very versatile; it can be used in both applications and technologies</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="c-syntax">
+            <h2>C Syntax</h2> <hr>
+            <article>
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        #include -stdio.h-  (-- = <>)
+                        int main() {
+                        printf("Hello World!");
+                        return 0;
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            <h5>Example explained</h5>
+            <p><b>Line 1:</b> <span style="color: red;">#include <stdio.h></stdio.h></span> is a <b>header file library</b> that lets us work with input and output functions, such as <span style="color: red;">printf()</span> (used in line 4). Header files add functionality to C programs.</p>
+            <p><b>Line 2:</b> A blank line. C ignores white space. But we use it to make the code more readable.</p>
+            <p><b>Line 3:</b> Another thing that always appear in a C program is <span style="color: red;">main()</span>. This is called a <b>function</b>. Any code inside its curly brackets {} will be executed.</p>
+            <p><b>Line 4:</b> <span style="color: red;">printf()</span> is a function used to output/print text to the screen. In our example, it will output "Hello World!".</p>
+            <p><b>Line 5:</b> <span style="color: red;">return 0</span> ends the <span style="color: red;">main()</span> function.</p>
+            <p><b>Line 6:</b> Do not forget to add the closing curly bracket <span style="color: red;">}</span> to actually end the main function.</p>
+            </article>
+        </section>
+
+        <section id="c-statements">
+            <h2>Statement in C</h2> <hr>
+            <article>
+                <p>A <b>computer program</b> is a list of "instructions" to be "executed" by a computer.</p>
+                <p>In a programming language, these programming instructions are called <b>statement</b></p>
+                <p>The following statement "instructs" the compiler to print the text "Hello World" to the screen:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        printf("Hello World!");
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+                <p>It is important that you end the statement with a semicolon ;</p>
+                <p>If you forget the semicolon (;), an error will occur and the program will not run:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                <code>
+                    printf("Hello World!")
+                    error: expected ';' before 'return'
+                    </code> 
+                    <p>Try code on your own</p>
+                </div>
+                <hr>
+
+                <h2>Many Statements</h2>
+                    <p>Most C programs contain many statements.</p>
+                    <p>The statements are executed, one by one, in the same order as they are written:</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            printf("Hello World!");
+                            printf("Have a good day!");
+                            return 0;
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+
+                    <h5>Example explained</h5>
+                    <p>From the example above, we have three statements:</p>
+                    <ol type="1">
+                        <li>printf("Hello World!");</li>
+                        <li>printf("Have a good day!");</li>
+                        <li>return 0;</li>
+                    </ol> 
+                    <p>The first statement is executed first (print "Hello World!" to the screen).</p>
+                    <p>Then the second statement is executed (print "Have a good day!" to the screen).</p>
+                    <p>And at last, the third statement is executed (end the C program successfully).</p>
+            </article>
+        </section>
+
+        <section id="c-output">
+            <h2>C OUTPUT (Print Text)</h2> <hr>
+            <h3>Output (Print Text)</h3>
+            <p>To output values or print text in C, you can use the <span style="color: red;">printf()</span> function:</p>
+             
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    #include -stdio.h-  (-- = <>)
+                    int main() {
+                    printf("Hello World!");
+                    return 0;
+                    }
+                </code>
+                <p>Try code on your own</p>
+            </div>
+
+            <h3>Double Quoates</h3>
+            <p>When you are working with text, it must be wrapped inside double quotations marks <span style="color: red;">""</span>.</p>
+            <p>If you forget the double quotes, an error occurs:</p>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    printf("This sentence will work!");
+
+                    printf(This sentence will produce an error.);
+                </code>
+                <p>Try code on your own</p>
+            </div>
+            
+
+            <h3>Many <span style="color: red;">printf</span> functions</h3>
+            <p>You can use as many <span style="color: red;">printf()</span> functions as you want. However, note that it does not insert a new line at the end of the output:</p>
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    #include -stdio.h- (-- = <>)
+                    int main() {
+                    printf("Hello World!");
+                    return 0;
+                    }
+                </code>
+                <p>Try code on your own</p>
+            </div>
+        </section>
+
+        <section id="c-comments">
+            <h2>C Comments</h2> <hr>
+
+            <h3>Comments in C</h3>
+            <p>Comments can be used to explain code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+            <p>Comments can be <b>singled-lined</b> or <b>multi-lined</b></p> 
+
+            <h3>Single lined comments</h3>
+            <p>Single-line comments start with two forward slashes (<span style="color: red;">//</span>).</p>
+            <p>Any text between <span style="color: red;">//</span> and the end of the line is ignored by the compiler (will not be executed).</p>
+            <p>This example uses a single-line comment before a line of code:</p>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    // This is a comment
+                    printf("Hello World!");
+                </code>
+                <p>Try code on your own</p>
+            </div>
+
+            <p>This example uses a single-line comment at the end of a line of code:</p>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    printf("Hello World!"); // This is a comment
+                </code> 
+                <p>Try code on your own</p>
+            </div>
+
+            <h3>C Multi-line Comments</h3>
+            <p>Multi-line comments start with <span style="color: red;">/*</span> and ends with <span style="color: red;">*/</span>.</p>
+            <p>Any text between <span style="color: red;">/*</span> and <span style="color: red;">*/</span> will be ignored by the compiler:</p>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    /* The code below will print the words Hello World!
+                    to the screen, and it is amazing */
+                    printf("Hello World!");
+                </code>
+                <p>Try code on your own</p>
+            </div>
+        </section>
+
+        <section id="c-variable">
+            <h2>C Variables</h2> <hr>
+
+            <h3>variables in C</h3>
+            <p>A variable in C is a named piece of memory which is used to store data and access it whenever required.</p>
+            <ul>
+                <li>It allows us to use the memory without having to memorize the exact memory address.</li>
+                <li>To create a variable in C, we have to specify a name and the type of data it is going to store.</li>
+                <li>C provides different data types that can store almost all kinds of data. For example, int, char, float, double, etc.</li>
+                <li>Every variable must be declared before it is used. We can also declare multiple variables of same data type in a single statement by separating them using comma .</li>
+            </ul>
+            
+            <div class="example">
+                 <h6>Syntax</h6>
+                <code>
+                    type variableName = value; 
+                </code>
+                <p>Try code on your own</p>
+            </div>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    // Declare a variable
+                    int myNum;
+
+                    // Assign a value to the variable
+                    myNum = 15; 
+                </code>
+                <p>Try code on your own</p>
+            </div>
+            
+            <h4>Rules for defining variable</h4>
+            <ul>
+                <li>A variable name must only contain letters, digits, and underscores.</li>
+                <li>It must start with an alphabet or an underscore only. It cannot start with a digit.</li>
+                <li>No white space is allowed within the variable name.</li>
+                <li>A variable name must not be any reserved word or keyword.</li>
+                <li>The name must be unique in the program.</li>
+            </ul>
+        </section>
+
+        <section id="c-datatypes">
+            <h2>C Data Types</h2> <hr>
+
+            <h3>Data Types in C</h3>
+            <p>Each variable in C has an associated data type. It specifies the type of data that the variable can store like integer, character, floating, double, etc.</p>
+            <p>C is a statically type language where each variable's type must be specified at the declaration and once specified, it cannot be changed.</p>
+
+            <h4>Integer Data Types</h4>
+            <ul>
+                <li>Stores whole numbers (positive, negative, or zero).</li>
+                <li>We use int keyword to declare the integer variable:</li>
+                <li>Size: 4 bytes, Range: -2,147,483,648 to 2,147,483,647.</li>
+                <li>Format specifier: %d.</li>
+            </ul>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    int var = 22;
+                </code>
+                <p>Try code on your own</p>
+            </div>
+
+            <h4>Character Data Type</h4>
+            <ul>
+                <li>Stores a single character (like ‘A’, ‘b’, or ‘5’).</li>
+                <li>Size: 1 byte, Range: -128 to 127 (signed by default).</li>
+                <li>Format specifier: %c.</li>
+            </ul>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    char ch = 'A';
+                </code>
+                <p>Try code on your own</p>
+            </div>
+
+            <h4>Float Data Type</h4>
+            <ul>
+                <li>Stores decimal numbers (numbers with fractional part).</li>
+                <li>Size: 4 bytes, Approximate range: 3.4e-38 to 3.4e+38.</li>
+                <li>Format specifier: %f.</li>
+            </ul>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    float val = 12.45;
+                </code>
+                <p>Try code on your own</p>
+            </div>
+
+            <h4>Double Data Type</h4>
+            <ul>
+                <li>Stores decimal numbers with more precision than float.</li>
+                <li>Size: 8 bytes, Approximate range: 1.7e-308 to 1.7e+308.</li>
+                <li>Format specifier: %lf.</li>
+            </ul>
+            
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+                    double val = 1.4521;
+                </code>
+                <p>Try code on your own</p>
+            </div>
+        </section>
+
+        <section id="c-operator">
+            <h2>C Operators</h2> <hr>
+
+            <h3>Operators in C</h3>
+            <p>Operators are the basic components of C programming. They are symbols that represent some kind of operation, such as mathematical, relational, bitwise, conditional, or logical computations, which are to be performed on values or variables. The values and variables used with operators are called operands.</p>
+
+            <h4>Unary, Binary and Turnary Operator</h4>
+            <p>On the basis of the number of operands they work on, operators can be classified into three types :</p>
+            <ol type="1">
+                <li><b>Unary Operator</b>
+                    <p>Operators that work on single operand.</p>
+                    <p>Example: Increment( ++) , Decrement(--).</p>
+                </li>
+
+                <li><b>Binary Operator</b>
+                    <p>Operators that work on two operands.</p>
+                    <p>Example: Addition (+), Subtraction( -) , Multiplication (*)</p>
+                </li>
+
+                <li><b>Ternary Operator</b>
+                    <p>Operators that work on three operands.</p>
+                    <p>Example: Conditional Operator( ? : )</p>
+                </li>
+            </ol>
+
+            <div class="dataTypes">
+                <h4>Tyeps of Operators</h4>
+                <p>C language provides a wide range of built in operators that can be classified into 6 types based on their functionality:</p>
+
+                <div class="arithmetic">
+                    <h4>Arithmetic Operators</h4>
+                    <p>The arithmetic operators are used to perform arithmetic/mathematical operations on operands. There are 9 arithmetic operators in C language:</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            #include -stdio.h- (-- = <>)
+
+                            int main() {
+
+                            int a = 25, b = 5;
+
+                            // using operators and printing results
+                            printf("a + b = %d\n", a + b);
+                            printf("a - b = %d\n", a - b);
+                            printf("a * b = %d\n", a * b);
+                            printf("a / b = %d\n", a / b);
+                            printf("a % b = %d\n", a % b);
+                            printf("+a = %d\n", +a);
+                            printf("-a = %d\n", -a);
+                            printf("a++ = %d\n", a++);
+                            printf("a-- = %d\n", a--);
+
+                            return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="relational">
+                    <h4>Relational Operators</h4>
+                    <p>The relational operators in C are used for the comparison of the two operands. All these operators are binary operators that return true or false values as the result of comparison.</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            #include -stdio.h-  (-- = <>)
+
+                            int main() {
+                            int a = 25, b = 5;
+
+                            // using operators and printing results
+                            printf("a < b  : %d\n", a < b);
+                            printf("a > b  : %d\n", a > b);
+                            printf("a <= b: %d\n", a <= b);
+                            printf("a >= b: %d\n", a >= b);
+                            printf("a == b: %d\n", a == b);
+                            printf("a != b : %d\n", a != b);
+
+                            return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="logical">
+                    <h4>Logical Operators</h4>
+                    <p>Logical Operators are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration. The result of the operation of a logical operator is a Boolean value either true or false.</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            #include -stdio.h- (-- = <>)
+
+                            int main() {
+                            int a = 25, b = 5;
+
+                            // using operators and printing results
+                            printf("a && b : %d\n", a && b);
+                            printf("a || b : %d\n", a || b);
+                            printf("!a: %d\n", !a);
+
+                            return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="bitwise">
+                    <h4>Bitwise Operators</h4>
+                    <p>The Bitwise operators are used to perform bit-level operations on the operands. The operators are first converted to bit-level and then the calculation is performed on the operands.</p>
+                    <p><b>Note: </b>operations such as addition, subtraction, multiplication, etc. can be performed at the bit level for faster processing.</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            #include -stdio.h- (-- = <>)
+
+                            int main() {
+                            int a = 25, b = 5;
+
+                            // using operators and printing results
+                            printf("a & b: %d\n", a & b);
+                            printf("a | b: %d\n", a | b);
+                            printf("a ^ b: %d\n", a ^ b);
+                            printf("~a: %d\n", ~a);
+                            printf("a >> b: %d\n", a >> b);
+                            printf("a << b: %d\n", a << b);
+
+                            return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="assignment">
+                    <h4>Assignment Opertors</h4>
+                    <p>Assignment operators are used to assign value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. The value on the right side must be of the same data type as the variable on the left side otherwise the compiler will raise an error.</p>
+                    
+                    <div class="example">
+                        <h6>Example</h6>
+                        <code>
+                            #include -stdio.h- (-- = <>)
+
+                            int main() {
+                            int a = 25, b = 5;
+
+                            // using operators and printing results
+                            printf("a = b: %d\n", a = b);
+                            printf("a += b: %d\n", a += b);
+                            printf("a -= b: %d\n", a -= b);
+                            printf("a *= b: %d\n", a *= b);
+                            printf("a /= b: %d\n", a /= b);
+                            printf("a %%= b: %d\n", a %= b);
+                            printf("a &= b: %d\n", a &= b);
+                            printf("a |= b: %d\n", a |= b);
+                            printf("a ^= b: %d\n", a ^= b);
+                            printf("a >>= b: %d\n", a >>= b); 
+                            printf("a <<= b: %d\n", a <<= b);
+
+                            return 0;
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-ifElse">
+            <h2>C if-else Conditions</h2> <hr>
+
+            <h3>if-else Conditions in C</h3>
+            <p>The if else in C is an extension of the if statement which not only allows the program to execute one block of code if a condition is true, but also a different block if the condition is false.</p>
+            <ul>
+                <li>If the condition is true, then the code inside the if block is executed, otherwise the code inside the else block is executed.</li>
+                <li>Any non-zero and non-null values are assumed to be true, and zero or null values are assumed to be false.</li>
+            </ul>
+
+            <div class="ifElse-types">
+                <div class="if">
+                    <h4>If...</h4>
+                    <p>Use the if statement to specify a block of code to be executed if a condition is true.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition) {
+                            // block of code to be executed if the condition is true
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="else">
+                    <h4>else...</h4>
+                    <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition) {
+                            // block of code to be executed if the condition is true
+                            } else {
+                            // block of code to be executed if the condition is false
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+
+                <div class="nestedIf">
+                    <h4>nested-if</h4>
+                    <p>You can also place an if statement inside another if. This is called a nested if statement.</p>
+                    <p>A nested if lets you check for a condition only if another condition is already true.</p>
+                    
+                    <div class="example">
+                        <h6>Syntax</h6>
+                        <code>
+                            if (condition1) {
+                            // code to run if condition1 is true
+                                if (condition2) {
+                                    // code to run if both condition1 and condition2 are true
+                                }
+                            }
+                        </code>
+                        <p>Try code on your own</p>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        
+        <section id="c-switch">
+            <h2>C Switch</h2> <hr>
+
+            <div class="switch-intro">
+                 <h3>Switch case in C</h3>
+                <p>C switch statement is a conditional statement that allows you to execute different code blocks based on the value of a variable or an expression. It is often used in place of if-else ladder when there are multiple conditions.</p>
+                
+                <div class="example">
+                    <h6>Syntax</h6>
+                    <code>
+                        switch (expression) {
+                        case value1:
+                        // Code_block1
+                        break;
+
+                        case value2:
+                        // Code_block2
+                        break;
+
+                        default:
+                        // Default_code_block
+                        }
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="switch-working">
+                <h3>Working of Switch Statements</h3>
+                <p>The working of the switch statement in C is as follows:</p>
+                <ul>
+                    <li><b>Step 1: </b>The switch variable is evaluated</li>
+                    <li><b>Step 2: </b>The evaluated value is matched against all the present cases.</li>
+                    <li><b>Step 3A: </b>The matching case value is found, the associated code is executed.</li>
+                    <li><b>Step 3B: </b>The matching code is not found, then the default case is executed if present.</li>
+                    <li><b>Step 4A: </b>The break keyword is present in the executed case, then program control breaks out of the switch statement after executing the code block associated with the first matching condition.</li>
+                    <li><b>Step 4B: </b>The break keyword is not present, then all the cases after the matching case are executed</li>
+                    <li><b>Step 5: </b>Statements after the switch statement are executed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="c-loops">
+            <h2>C Loops</h2> <hr>
+
+            <div class="loopIntro">
+                <h3>Loops in C</h3>
+                <p>Loops in C programming are used to repeat a block of code until the specified condition is met. It allows programmers to execute a statement or group of statements multiple times without writing the code again and again.</p>
+
+                <div class="typesLoop">
+                    <h4>Types of Loops in C</h4>
+                    <p>There are 3 looping statements in C:</p>
+
+                    <div class="forLoop">
+                        <h3>For Loop</h3>
+                        <p>for loop is an entry-controlled loop, which means that the condition is checked before the loop's body executes.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                for (initialization; condition; updation) { 
+                                // body of for loop
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                        <p>The various parts of the for loop are:</p>
+                        <ul>
+                            <li><b>Initialization:</b> Initialize the variable to some initial value.</li>
+                            <li><b>Test Condition:</b> This specifies the test condition. If the condition evaluates to true, then body of the loop is executed. If evaluated false, loop is terminated.</li>
+                            <li><b>Update Expression:</b> After the execution loop’s body, this expression increments/decrements the loop variable by some value.</li>
+                        </ul>
+                    </div>
+
+                    <div class="whileLoop">
+                        <h3>While Loop</h3>
+                        <p>A while loop is also an entry-controlled loop in which the condition is checked before entering the body.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                while (condition) {
+                                // Body of the loop
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+
+                    <div class="do-whileLoop">
+                        <h3>Do-While Loop</h3>
+                        <p>The do-while loop is an exit-controlled loop, which means that the condition is checked after executing the loop body. Due to this, the loop body will execute at least once irrespective of the test condition.</p>
+                        
+                        <div class="example">
+                            <h6>Syntax</h6>
+                            <code>
+                                do {
+                                // Body of the loop
+                                } while (condition);
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+
+                    <div class="nestedLoop">
+                        <h3>Nested Loops</h3>
+                        <p>Nesting loops means placing one loop inside another. The inner loop runs fully for each iteration of the outer loop. This technique is helpful when you need to perform multiple iterations within each cycle of a larger loop, like when working with a two-dimensional array or performing tasks that require multiple levels of iteration.</p>
+                        
+                        <div class="example">
+                            <h6>Example</h6>
+                            <code>
+                                #include -stdio.h- (-- = <>)
+
+                                int main() {
+                                // Outer loop runs 3 times
+                                for (int i = 0; i < 3; i++) {
+        
+                                // Inner loop runs 2 times for each
+                                // outer loop iteration
+                                    for (int j = 0; j < 2; j++) {
+                                        printf("i = %d, j = %d\n", i, j);
+                                        }
+                                    }
+                                return 0;
+                                }
+                            </code>
+                            <p>Try code on your own</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-arrays">
+            <h2>C Arrays</h2> <hr>
+            
+            <div class="arrayIntro">
+                <h3>Arrays in C</h3>
+                <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+                <p>To create an array, define the data type (like int) and specify the name of the array followed by square brackets []. </p>
+                <p>To insert values to it, use a comma-separated list inside curly braces, and make sure all values are of the same data type:</p>
+                
+                <div class="example">
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="accessEle">
+                <h3>Accessing Array Elements</h3>
+                <p>To access an array element, refer to its index number.</p>
+                <p>Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+                <p>This statement accesses the value of the first element [0] in myNumbers:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                        printf("%d", myNumbers[0]);
+
+                        // Outputs 25
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="changeEle">
+                <h3>Change Array Elements</h3>
+                <p>To change the value of a specific element, refer to the index number:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myNumbers[] = {25, 50, 75, 100};
+                        myNumbers[0] = 33;
+
+                        printf("%d", myNumbers[0]);
+
+                        // Now outputs 33 instead of 25
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="setSize">
+                <h3>Set Array Size</h3>
+                <p>Another common way to create arrays, is to specify the size of the array, and add elements later:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        // Declare an array of four integers:
+                        int myNumbers[4];
+
+                        // Add elements
+                        myNumbers[0] = 25;
+                        myNumbers[1] = 50;
+                        myNumbers[2] = 75;
+                        myNumbers[3] = 100;
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-string">
+            <h2>C Strings</h2> <hr>
+
+            <div class="stringIntro">
+                <h3>String</h3>
+                <p>Strings are used for storing text/characters.</p>
+                <p>For example, "Hello World" is a string of characters.</p>
+                <p>Unlike many other programming languages, C does not have a String type to easily create string variables. Instead, you must use the char type and create an array of characters to make a string in C:</p>
+
+                <div class="example">
+                    <code>
+                        char greetings[] = "Hello World!";
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        printf("%s", greetings);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="accessStr">
+                <h3>Access String</h3>
+                <p>Since strings are actually arrays in C, you can access a string by referring to its index number inside square brackets [].</p>
+                <p>This example prints the first character (0) in greetings:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        printf("%c", greetings[0]);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+
+            <div class="modifyStr">
+                <h3>Modify String</h3>
+                <p>To change the value of a specific character in a string, refer to the index number, and use single quotes:</p>
+                
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        char greetings[] = "Hello World!";
+                        greetings[0] = 'J'; 
+                        printf("%s", greetings);
+                        // Outputs Jello World! instead of Hello World!
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-pointers">
+            <h2>C Pointers</h2> <hr>
+
+            <div class="ptrIntro">
+                <h3>Pointers in C</h3>
+                <p>A pointer is a variable that stores the memory address of another variable. Instead of holding a direct value, it holds the address where the value is stored in memory. It is the backbone of low-level memory manipulation in C.</p>
+                <ul>
+                    <li>A pointer is declared by specifying its data type and name, with an asterisk (*) before the name. Syntax: data_type *pointer_name;</li>
+                    <li>The data type indicates the type of variable the pointer can point to. For example, "int *ptr;" declares a pointer to an integer.</li>
+                    <li>Accessing the pointer directly will just give us the address that is stored in the pointer. To get the value at the address stored in a pointer variable, we use * operator which is call dereferencing operator in C.</li>
+                    <li>Note that we use * for two different purposes in pointers. One is to declare a pointer variable and the other is in an operator to get the value stored at address stored in pointer.</li>
+                </ul>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myAge = 43; // an int variable
+
+                        printf("%d", myAge);  // Outputs the value of myAge (43)
+                        printf("%p", &myAge); // Outputs the memory address of myAge (0x7ffe5367e044)
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+
+                <p>A pointer is a variable that stores the memory address of another variable as its value.</p>
+                <p>A pointer variable points to a data type (like int) of the same type, and is created with the * operator.</p>
+                <p>The address of the variable you are working with is assigned to the pointer:</p>
+
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+                        int myAge = 43;     // An int variable
+                        int* ptr = &myAge;  // A pointer variable, with the name ptr, that stores the address of myAge
+
+                        // Output the value of myAge (43)
+                        printf("%d\n", myAge);
+
+                        // Output the memory address of myAge (0x7ffe5367e044)  
+                        printf("%p\n", &myAge);
+
+                        // Output the memory address of myAge with the pointer (0x7ffe5367e044)
+                        printf("%p\n", ptr);
+                    </code>
+                    <p>Try code on your own</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

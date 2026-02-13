@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+}
+
+.sidebar {
+    position: sticky; top: 0;
+    height: 100dvh;
+    background: #111827;       
+    color: #e5e7eb;
+    padding: 24px 16px;
+    box-shadow: inset -1px 0 0 rgba(255,255,255,.04);
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    letter-spacing: .3px;
+    color: var(--brand);
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.sidebar ul {
+    list-style: none; 
+    display: grid; 
+    gap: 6px; 
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #cbd5e1; text-decoration: none; font-weight: 500;
+    transition: transform .12s ease, background .12s ease, color .12s ease;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255,255,255,.06); 
+    color: #ffffff; transform: translateX(2px); 
+}
+
+.sidebar a.active{ 
+  background: rgba(6,182,212,.14); 
+  color: #ecfeff; 
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.section-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.note-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.note-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transform: scale(1.01);
+}
+
+.note-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.note-card p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.note-card a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.note-card a:hover {
+    background-color: #0056b3;
+}
+
+.note-meta {
+    font-size: 13px;
+    color: gray;
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}

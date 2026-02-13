@@ -1,0 +1,7 @@
+.vscode/
+node_modules/
+*.log
+*.zip
+*.rar
+*.tmp
+.DS_Store

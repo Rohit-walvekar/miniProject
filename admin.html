@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Notes Provider</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="admin_users.php">Users</a></li>
+                <li><a href="admin_feedback.php">Feedback</a></li>
+                <li><a href="admin_upload.php">Upload Notes</a></li>
+                <!-- <li><a href="view_notes.php">View Notes</a></li> -->
+                <li><a href="admin_user_activity.php">Users Activity</a></li>
+                <li><a href="admin_logout.php">Logout</a></li>
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Admin</h1>
+                <p>Status: <span id="status">Loading...</span></p>
+            </header>
+
+            <section class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p id="userCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Feedback Received</h3>
+                    <p id="feedbackCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Files Uploaded</h3>
+                    <p id="uploadCount">0</p>
+                </div>
+            </section>
+
+            <section class="data-section">
+                <h2>Recent User Activity</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Action</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityTable">
+                        <tr><td colspan="4">Loading data...</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    async function loadDashboard() {
+        try {
+            const response = await fetch('admin.php');
+            const data = await response.json();
+
+            document.getElementById('userCount').innerText = data.userCount;
+            document.getElementById('feedbackCount').innerText = data.feedbackCount;
+            document.getElementById('uploadCount').innerText = data.uploadCount;
+
+            const tableBody = document.getElementById('activityTable');
+            tableBody.innerHTML = '';
+
+            if (data.activity && data.activity.length > 0) {
+                data.activity.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.user_id ?? '-'}</td>
+                        <td>${row.username}</td>
+                        <td>${row.action}</td>
+                        <td>${row.log_time}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+            } else {
+                tableBody.innerHTML = '<tr><td colspan="4">No activity found.</td></tr>';
+            }
+
+            document.getElementById('status').innerText = 'Connected ';
+        } catch (error) {
+            console.error(error);
+            document.getElementById('status').innerText = 'Error ';
+        }
+    }
+
+    loadDashboard(); 
+    </script>
+</body>
+</html>
