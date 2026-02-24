@@ -1,10 +1,10 @@
-# 📚 Programming Notes & Quiz System
+# Programming Notes & Quiz System
 
 A full-stack web application where students can learn programming languages, attempt quizzes, download notes and admin can manage users and content.
 
 ---
 
-## 🚀 Features
+## Features
 
 - User Login / Registration
 - Programming Notes (C, C++, etc.)
@@ -18,7 +18,7 @@ A full-stack web application where students can learn programming languages, att
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 Frontend:
 
@@ -36,7 +36,7 @@ Database:
 
 ---
 
-## 📊 System Diagrams
+## System Diagrams
 
 - ER Diagram
 - Data Flow Diagram
@@ -46,7 +46,7 @@ Database:
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. Download project
 2. Move folder to htdocs (XAMPP)
@@ -59,25 +59,20 @@ Open phpMyAdmin → Import → DB.sql
 
 ---
 
-## 👨‍💻 Admin Login
+## Admin Login
 
 Email: admin@gmail.com  
 Password: admin123
 
 ---
 
-## 📷 Screenshots
 
-(Add screenshots here later)
-
----
-
-## 🎯 Purpose
+## Purpose
 
 This project is created as a BCA final year academic project to demonstrate full stack web development skills.
 
 ---
 
-## 📌 Author
+## Author
 
 Rohit Walvekar
