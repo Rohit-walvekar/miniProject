@@ -59,14 +59,6 @@ Open phpMyAdmin → Import → DB.sql
 
 ---
 
-## Admin Login
-
-Email: admin@gmail.com  
-Password: admin123
-
----
-
-
 ## Purpose
 
 This project is created as a BCA final year academic project to demonstrate full stack web development skills.
