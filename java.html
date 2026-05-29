@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java programming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="java.css"></head>
+<body>
+    <header>
+        <nav>
+            <h1>Java Tutorial</h1>
+            <ul>
+                <a href="#java-intro"><li>Introduction</li></a>
+                <a href="#java-syntax"><li>Java Syntax</li></a>
+                <a href="#java-output"><li>Java Output</li></a>
+                <a href="#java-variable"><li>Java Variables</li></a>
+                <a href="#java-datatypes"><li>Data Types</li></a>
+                <a href="#java-ifElse"><li>If...Else</li></a>
+                <a href="#java-loops"><li>Loops</li></a>
+                <a href="#java-methods"><li>Methods</li></a>
+                <a href="#java-oop"><li>OOP Concepts</li></a>
+                <a href="#java-exceptions"><li>Exceptions</li></a>
+                <a href="java_notes_quiz.php"><li>Java Quiz</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="java-intro">
+            <h2>Introduction to Java</h2> <hr>
+            <h3>What is Java?</h3>
+            <article>
+                <ul>
+                    <li>Java is a popular programming language, created in 1995.</li>
+                    <li>It is owned by Oracle, and more than 3 billion devices run Java.</li>
+                    <li>It is used for mobile applications (specially Android apps), desktop applications, web applications, web servers and application servers, games, and much more!</li>
+                </ul>
+            </article>
+            <hr>
+            <h3>Why Use Java?</h3>
+            <article>
+                <ul>
+                    <li>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</li>
+                    <li>It is one of the most popular programming languages in the world</li>
+                    <li>It has a large demand in the current job market</li>
+                    <li>It is easy to learn and simple to use</li>
+                    <li>It is open-source and free</li>
+                    <li>It is secure, fast and powerful</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="java-syntax">
+            <h2>Java Syntax</h2> <hr>
+            <article>
+                <div class="example">
+                    <h6>Example</h6>
+                    <code>
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+                    </code>
+                </div>
+                <h5>Example explained</h5>
+                <p>Every line of code that runs in Java must be inside a <b>class</b>. In our example, we named the class <b>Main</b>. A class should always start with an uppercase first letter.</p>
+                <p>The <b>main()</b> method is required and you will see it in every Java program. Any code inside the main() method will be executed.</p>
+                <p><b>System.out.println()</b> is used to print text to the screen.</p>
+            </article>
+        </section>
+
+        <section id="java-output">
+            <h2>Java Output</h2> <hr>
+            <p>You can use the <code>println()</code> method to output values or print text in Java:</p>
+            <div class="example">
+                <h6>Example</h6>
+                <code>
+System.out.println("Hello World!");
+System.out.println("I am learning Java.");
+                </code>
+            </div>
+        </section>
+
+        <section id="java-variable">
+            <h2>Java Variables</h2> <hr>
+            <p>Variables are containers for storing data values.</p>
+            <ul>
+                <li><b>String</b> - stores text, such as "Hello". String values are surrounded by double quotes</li>
+                <li><b>int</b> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                <li><b>float</b> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                <li><b>char</b> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                <li><b>boolean</b> - stores values with two states: true or false</li>
+            </ul>
+        </section>
+
+        <section id="java-datatypes">
+            <h2>Java Data Types</h2> <hr>
+            <p>Data types are divided into two groups:</p>
+            <ul>
+                <li><b>Primitive data types</b> - includes byte, short, int, long, float, double, boolean and char</li>
+                <li><b>Non-primitive data types</b> - such as String, Arrays and Classes</li>
+            </ul>
+        </section>
+
+        <section id="java-ifElse">
+            <h2>Java If...Else</h2> <hr>
+            <p>Java supports the usual logical conditions from mathematics:</p>
+            <ul>
+                <li>Less than: a &lt; b</li>
+                <li>Less than or equal to: a &lt;= b</li>
+                <li>Greater than: a &gt; b</li>
+                <li>Greater than or equal to: a &gt;= b</li>
+                <li>Equal to a == b</li>
+                <li>Not Equal to: a != b</li>
+            </ul>
+        </section>
+
+        <section id="java-loops">
+            <h2>Java Loops</h2> <hr>
+            <p>Loops can execute a block of code as long as a specified condition is reached.</p>
+            <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+            <h4>While Loop</h4>
+            <div class="example">
+                <code>
+while (condition) {
+  // code block to be executed
+}
+                </code>
+            </div>
+            <h4>For Loop</h4>
+            <div class="example">
+                <code>
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+                </code>
+            </div>
+        </section>
+
+        <section id="java-methods">
+            <h2>Java Methods</h2> <hr>
+            <p>A <b>method</b> is a block of code which only runs when it is called.</p>
+            <p>You can pass data, known as parameters, into a method.</p>
+            <div class="example">
+                <h6>Creating a Method</h6>
+                <code>
+public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+                </code>
+            </div>
+            <div class="tip" style="background: #EFF6FF; border-left: 4px solid #2563EB; padding: 1rem; margin: 1rem 0; border-radius: 8px;">
+                <p style="margin:0; font-size: 0.9rem; color: #1E40AF;"><strong>Pro Tip:</strong> Methods are used to perform certain actions, and they are also known as <b>functions</b>. Why use methods? To reuse code: define the code once, and use it many times.</p>
+            </div>
+        </section>
+
+        <section id="java-oop">
+            <h2>Java OOP (Object-Oriented Programming)</h2> <hr>
+            <p>OOP stands for Object-Oriented Programming.</p>
+            <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p>
+            
+            <h3>Classes and Objects</h3>
+            <p>Java is an object-oriented programming language. Everything in Java is associated with classes and objects, along with its attributes and methods.</p>
+            <div class="example">
+                <h6>Example: Class and Object</h6>
+                <code>
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+                </code>
+            </div>
+
+            <h3>The Four Pillars of OOP</h3>
+            <ul>
+                <li><b>Inheritance:</b> A class can derive its properties and methods from another class.</li>
+                <li><b>Polymorphism:</b> Objects can take on many forms.</li>
+                <li><b>Abstraction:</b> Hiding complex details and showing only the essential features of the object.</li>
+                <li><b>Encapsulation:</b> Keeping fields within a class private, then providing access to them via public methods.</li>
+            </ul>
+        </section>
+
+        <section id="java-exceptions">
+            <h2>Java Exception Handling</h2> <hr>
+            <p>When executing Java code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.</p>
+            <p>When an error occurs, Java will normally stop and generate an error message. The technical term for this is: Java will throw an <b>exception</b> (throw an error).</p>
+            <div class="example">
+                <h6>Try...Catch Example</h6>
+                <code>
+try {
+  int[] myNumbers = {1, 2, 3};
+  System.out.println(myNumbers[10]);
+} catch (Exception e) {
+  System.out.println("Something went wrong.");
+} finally {
+  System.out.println("The 'try catch' is finished.");
+}
+                </code>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

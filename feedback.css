@@ -1,101 +1,131 @@
+/* ===== FEEDBACK PAGE ===== */
+:root {
+  --primary: #2563EB;
+  --secondary: #1E40AF;
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --accent: #38BDF8;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #00bcd4, #75bffc);
+  background: linear-gradient(160deg, #EFF6FF 0%, #DBEAFE 50%, #F8FAFC 100%);
   padding: 20px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .feedback-container {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
 }
 
 .feedback-box {
-  background: #ffffffee;
+  background: var(--card);
   border-radius: 16px;
-  padding: 36px 28px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--border);
+  padding: 40px 32px;
+  box-shadow: 0 10px 40px rgba(15,23,42,.08);
   text-align: center;
+  animation: fadeUp 0.4s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .feedback-box h2 {
-  font-size: 1.6rem;
-  color: #222;
+  font-size: 1.5rem;
+  color: var(--text);
   margin-bottom: 8px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
 }
 
 .feedback-box p {
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 25px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .feedback-box input,
 .feedback-box textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--border);
   border-radius: 10px;
   outline: none;
-  font-size: 0.95rem;
-  background: #fff;
-  color: #333;
-  transition: 0.3s ease;
+  font-size: 14px;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .feedback-box input:focus,
 .feedback-box textarea:focus {
-  border-color: #9ad4ff;
-  box-shadow: 0 0 0 4px rgba(0, 140, 255, 0.12);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.1);
 }
 
 .feedback-box textarea {
   resize: none;
-  height: 100px;
+  height: 110px;
 }
 
 .feedback-box button {
   width: 100%;
   padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Inter', system-ui, sans-serif;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(37,99,235,.25);
+  letter-spacing: 0.3px;
 }
 
 .feedback-box button:hover {
+  background: linear-gradient(135deg, var(--secondary), #1E3A8A);
   transform: translateY(-1px);
-  opacity: 0.95;
+  box-shadow: 0 6px 20px rgba(37,99,235,.35);
 }
 
 .back-link {
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 0.92rem;
 }
 
 .back-link a {
-  color: #0b74ff;
+  color: var(--primary);
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .back-link a:hover {
+  color: var(--secondary);
   text-decoration: underline;
 }
 

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C programming</title>
-    <link rel="stylesheet" href="c.css">
-    <link rel="stylesheet" href="cpp.html">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="c.css"></head>
 <body>
     <header>
         <nav>
@@ -25,7 +26,9 @@
                 <a href="#c-loops"><li>Loops in C</li></a>
                 <a href="#c-arrays"><li>Arrays in C</li></a>
                 <a href="#c-string"><li>String in C</li></a>
-                <a href="#c-pointers"><li>Pointers in C</li></a>
+                <a href="#c-pointers"><li>Pointers</li></a>
+                <a href="#c-structures"><li>Structures</li></a>
+                <a href="#c-files"><li>File Handling</li></a>
                 <a href="c_notes_quiz.php"><li>C Quiz</li></a>
             </ul>
         </nav>
@@ -887,7 +890,55 @@
             </div>
         </section>
 
+        <section id="c-structures">
+            <h2>C Structures (structs)</h2> <hr>
+            <p>Structures (also called structs) are a way to group several related variables into one place. Each variable in the structure is known as a <b>member</b> of the structure.</p>
+            <p>Unlike an array, a structure can contain many different data types (int, float, char, etc.).</p>
+            <div class="example">
+                <h6>Creating a Struct</h6>
+                <code>
+struct myStructure {
+  int myNum;
+  char myLetter;
+};
+
+int main() {
+  struct myStructure s1;
+  s1.myNum = 13;
+  s1.myLetter = 'B';
+
+  printf("My number: %d\n", s1.myNum);
+  printf("My letter: %c\n", s1.myLetter);
+  return 0;
+}
+                </code>
+            </div>
+            <div class="tip" style="background: #FFF1F2; border-left: 4px solid #E11D48; padding: 1rem; margin: 1rem 0; border-radius: 8px;">
+                <p style="margin:0; font-size: 0.9rem; color: #9F1239;"><strong>Professional Note:</strong> Structs are essential for creating complex data types and are the basis for many advanced data structures like Linked Lists and Trees.</p>
+            </div>
+        </section>
+
+        <section id="c-files">
+            <h2>C File Handling</h2> <hr>
+            <p>In C, you can create, open, read, and write to files by declaring a pointer of type <code>FILE</code>, and use the <code>fopen()</code> function.</p>
+            <div class="example">
+                <h6>Writing to a File</h6>
+                <code>
+FILE *fptr;
+
+// Open a file in writing mode
+fptr = fopen("filename.txt", "w");
+
+// Write some text to the file
+fprintf(fptr, "Some text");
+
+// Close the file
+fclose(fptr);
+                </code>
+            </div>
+        </section>
     </main>
 
+    <a href="#" class="back-to-top" style="position: fixed; bottom: 20px; right: 20px; background: #4F46E5; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; items-center; justify-center; text-decoration: none;">↑</a>
 </body>
 </html>

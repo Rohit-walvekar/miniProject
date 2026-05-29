@@ -31,7 +31,7 @@ nav a {
   border-radius: 8px; font-size: 14px; font-weight: 500;
   transition: all .2s ease;
 }
-nav a:hover { background: rgba(37,99,235,.15); color: #fff; transform: translateX(3px); }
+nav a:hover { background: rgba(37, 99, 235, 0.15); color: #fff; transform: translateX(3px); }
 nav li { margin: 0; width: 100%; }
 main { flex: 1; padding: 2rem; height: 100vh; overflow-y: auto; line-height: 1.7; }
 section {
@@ -55,7 +55,7 @@ li { margin-bottom: .5rem; }
 .example {
   background-color: #0F172A; border-radius: 10px;
   padding: 1.5rem; margin: 1.5rem 0; position: relative;
-  overflow-x: auto; border: 1px solid rgba(56,189,248,.1);
+  overflow-x: auto;  border: 1px solid rgba(56, 189, 248, 0.1);
 }
 .example h6 { color: var(--accent); margin-top: 0; }
 .example p { color: rgba(255,255,255,.7); }
@@ -81,35 +81,16 @@ footer { background-color: var(--secondary); color: white; text-align: center; p
   color: white; width: 48px; height: 48px; border-radius: 50%;
   display: flex; justify-content: center; align-items: center;
   text-decoration: none; font-size: 1.3rem;
-  box-shadow: 0 4px 12px rgba(37,99,235,.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
   transition: all .3s ease; z-index: 99;
 }
-.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37,99,235,.4); }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); }
 article { margin-bottom: 1.5rem; }
-.dataTypes, .ifElse-types, .switch-intro, .switch-working,
-.loopIntro, .typesLoop, .arrayIntro, .accessEle,
-.changeEle, .setSize, .stringIntro, .accessStr,
-.modifyStr, .ptrIntro { margin-bottom: 1.5rem; }
 .forLoop, .whileLoop, .do-whileLoop, .nestedLoop,
 .arithmetic, .relational, .logical, .bitwise, .assignment {
   margin-bottom: 1.5rem; padding-left: 1rem;
   border-left: 3px solid var(--border);
 }
-.attempt-quiz-section {
-  text-align: center; background: #EFF6FF;
-  padding: 30px; margin-top: 40px;
-  border-top: 2px solid var(--border); border-radius: 14px;
-}
-.quiz-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white; text-decoration: none;
-  padding: 12px 28px; border-radius: 10px;
-  font-weight: 700; font-size: 14px;
-  transition: all .3s ease;
-  box-shadow: 0 4px 12px rgba(37,99,235,.25);
-}
-.quiz-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,.35); }
 @media print {
   header, .back-to-top { display: none; }
   body { display: block; }

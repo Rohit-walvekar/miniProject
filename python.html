@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python programming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="python.css"></head>
+<body>
+    <header>
+        <nav>
+            <h1>Python Tutorial</h1>
+            <ul>
+                <a href="#py-intro"><li>Introduction</li></a>
+                <a href="#py-syntax"><li>Python Syntax</li></a>
+                <a href="#py-comments"><li>Comments</li></a>
+                <a href="#py-variables"><li>Variables</li></a>
+                <a href="#py-datatypes"><li>Data Types</li></a>
+                <a href="#py-ifElse"><li>If...Else</li></a>
+                <a href="#py-loops"><li>Loops</li></a>
+                <a href="#py-datastructures"><li>Data Structures</li></a>
+                <a href="#py-functions"><li>Functions</li></a>
+                <a href="#py-oop"><li>OOP Concepts</li></a>
+                <a href="python_notes_quiz.php"><li>Python Quiz</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="py-intro">
+            <h2>Introduction to Python</h2> <hr>
+            <h3>What is Python?</h3>
+            <article>
+                <ul>
+                    <li>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</li>
+                    <li>It is used for: web development (server-side), software development, mathematics, system scripting.</li>
+                </ul>
+            </article>
+            <hr>
+            <h3>Why Python?</h3>
+            <article>
+                <ul>
+                    <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+                    <li>Python has a simple syntax similar to the English language.</li>
+                    <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+                    <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="py-syntax">
+            <h2>Python Syntax</h2> <hr>
+            <p>Python syntax can be executed by writing directly in the Command Line:</p>
+            <div class="example">
+                <code>
+>>> print("Hello, World!")
+Hello, World!
+                </code>
+            </div>
+            <h4>Python Indentation</h4>
+            <p>Indentation refers to the spaces at the beginning of a code line. Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. Python uses indentation to indicate a block of code.</p>
+            <div class="example">
+                <code>
+if 5 > 2:
+  print("Five is greater than two!")
+                </code>
+            </div>
+        </section>
+
+        <section id="py-comments">
+            <h2>Python Comments</h2> <hr>
+            <p>Comments can be used to explain Python code. Comments can be used to make the code more readable.</p>
+            <div class="example">
+                <code>
+# This is a comment
+print("Hello, World!")
+                </code>
+            </div>
+        </section>
+
+        <section id="py-variables">
+            <h2>Python Variables</h2> <hr>
+            <p>Variables are containers for storing data values. Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
+            <div class="example">
+                <code>
+x = 5
+y = "John"
+print(x)
+print(y)
+                </code>
+            </div>
+        </section>
+
+        <section id="py-datatypes">
+            <h2>Python Data Types</h2> <hr>
+            <p>In programming, data type is an important concept. Variables can store data of different types, and different types can do different things.</p>
+            <ul>
+                <li>Text Type: <b>str</b></li>
+                <li>Numeric Types: <b>int, float, complex</b></li>
+                <li>Sequence Types: <b>list, tuple, range</b></li>
+                <li>Mapping Type: <b>dict</b></li>
+                <li>Set Types: <b>set, frozenset</b></li>
+                <li>Boolean Type: <b>bool</b></li>
+                <li>Binary Types: <b>bytes, bytearray, memoryview</b></li>
+            </ul>
+        </section>
+
+        <section id="py-ifElse">
+            <h2>Python If...Else</h2> <hr>
+            <p>Python supports the usual logical conditions from mathematics:</p>
+            <div class="example">
+                <code>
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+                </code>
+            </div>
+        </section>
+
+        <section id="py-loops">
+            <h2>Python Loops</h2> <hr>
+            <p>Python has two primitive loop commands:</p>
+            <ul>
+                <li><b>while</b> loops</li>
+                <li><b>for</b> loops</li>
+            </ul>
+            <h4>The while Loop</h4>
+            <div class="example">
+                <code>
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+                </code>
+            </div>
+        </section>
+
+        <section id="py-datastructures">
+            <h2>Python Data Structures</h2> <hr>
+            <p>Python has four built-in data types used to store collections of data:</p>
+            <ul>
+                <li><b>List:</b> A collection which is ordered and changeable. Allows duplicate members.</li>
+                <li><b>Tuple:</b> A collection which is ordered and unchangeable. Allows duplicate members.</li>
+                <li><b>Set:</b> A collection which is unordered, unchangeable*, and unindexed. No duplicate members.</li>
+                <li><b>Dictionary:</b> A collection which is ordered** and changeable. No duplicate members.</li>
+            </ul>
+            <div class="example">
+                <h6>List Example</h6>
+                <code>
+fruits = ["apple", "banana", "cherry"]
+print(fruits[1]) # Outputs: banana
+                </code>
+            </div>
+            <div class="tip" style="background: #EFF6FF; border-left: 4px solid #2563EB; padding: 1rem; margin: 1rem 0; border-radius: 8px;">
+                <p style="margin:0; font-size: 0.9rem; color: #1E40AF;"><strong>Pro Tip:</strong> Lists are one of the most used data structures in Python. Use them when you need an ordered collection of items that can be modified.</p>
+            </div>
+        </section>
+
+        <section id="py-functions">
+            <h2>Python Functions</h2> <hr>
+            <p>A function is a block of code which only runs when it is called.</p>
+            <p>You can pass data, known as parameters, into a function.</p>
+            <div class="example">
+                <h6>Creating a Function</h6>
+                <code>
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+                </code>
+            </div>
+        </section>
+
+        <section id="py-oop">
+            <h2>Python Classes and Objects</h2> <hr>
+            <p>Python is an object oriented programming language.</p>
+            <p>Almost everything in Python is an object, with its properties and methods.</p>
+            <p>A Class is like an object constructor, or a "blueprint" for creating objects.</p>
+            <div class="example">
+                <h6>Example: Class definition</h6>
+                <code>
+class MyClass:
+  x = 5
+
+p1 = MyClass()
+print(p1.x)
+                </code>
+            </div>
+            <h4>The __init__() Function</h4>
+            <p>All classes have a function called <code>__init__()</code>, which is always executed when the class is being initiated.</p>
+            <div class="example">
+                <code>
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+print(p1.name)
+                </code>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">↑</a>
+</body>
+</html>

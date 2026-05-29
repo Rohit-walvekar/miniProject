@@ -3,101 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel | Notes Provider</title>
-    <link rel="stylesheet" href="admin.css">
-</head>
-<body>
-    <div class="admin-container">
-        <aside class="sidebar">
-            <h2>Admin Panel</h2>
-            <ul>
-                <li><a href="admin.html">Dashboard</a></li>
-                <li><a href="admin_users.php">Users</a></li>
-                <li><a href="admin_feedback.php">Feedback</a></li>
-                <li><a href="admin_upload.php">Upload Notes</a></li>
-                <!-- <li><a href="view_notes.php">View Notes</a></li> -->
-                <li><a href="admin_user_activity.php">Users Activity</a></li>
-                <li><a href="admin_logout.php">Logout</a></li>
-            </ul>
-
-        </aside>
-
-        <main class="main-content">
-            <header>
-                <h1>Welcome, Admin</h1>
-                <p>Status: <span id="status">Loading...</span></p>
-            </header>
-
-            <section class="dashboard-cards">
-                <div class="card">
-                    <h3>Total Users</h3>
-                    <p id="userCount">0</p>
-                </div>
-                <div class="card">
-                    <h3>Feedback Received</h3>
-                    <p id="feedbackCount">0</p>
-                </div>
-                <div class="card">
-                    <h3>Files Uploaded</h3>
-                    <p id="uploadCount">0</p>
-                </div>
-            </section>
-
-            <section class="data-section">
-                <h2>Recent User Activity</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>User ID</th>
-                            <th>Username</th>
-                            <th>Action</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody id="activityTable">
-                        <tr><td colspan="4">Loading data...</td></tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
-
+    <title>Admin Dashboard | Noted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    async function loadDashboard() {
-        try {
-            const response = await fetch('admin.php');
-            const data = await response.json();
-
-            document.getElementById('userCount').innerText = data.userCount;
-            document.getElementById('feedbackCount').innerText = data.feedbackCount;
-            document.getElementById('uploadCount').innerText = data.uploadCount;
-
-            const tableBody = document.getElementById('activityTable');
-            tableBody.innerHTML = '';
-
-            if (data.activity && data.activity.length > 0) {
-                data.activity.forEach(row => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${row.user_id ?? '-'}</td>
-                        <td>${row.username}</td>
-                        <td>${row.action}</td>
-                        <td>${row.log_time}</td>
-                    `;
-                    tableBody.appendChild(tr);
-                });
-            } else {
-                tableBody.innerHTML = '<tr><td colspan="4">No activity found.</td></tr>';
-            }
-
-            document.getElementById('status').innerText = 'Connected ';
-        } catch (error) {
-            console.error(error);
-            document.getElementById('status').innerText = 'Error ';
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 
+            outfit: ['Outfit', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'] 
+          }
         }
+      }
     }
-
-    loadDashboard(); 
     </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-outfit { font-family: 'Outfit', sans-serif; }
+      .sidebar-link.active { background: rgba(255, 255, 255, 0.1); color: white; border-right: 4px solid #4F46E5; }
+    </style>
+</head>
+<body class="bg-[#F1F5F9] text-slate-900 antialiased">
+  <div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-72 bg-slate-900 text-white flex-shrink-0 sticky top-0 h-screen overflow-y-auto z-50 shadow-2xl">
+      <div class="p-8 pb-10 flex items-center gap-3">
+        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+        </div>
+        <h2 class="text-2xl font-black tracking-tight text-white">Noted<span class="text-indigo-500">Admin</span></h2>
+      </div>
+      
+      <nav class="px-4">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-4 px-4">Main Menu</div>
+        <ul class="space-y-1">
+          <li><a href="admin.html" class="sidebar-link active flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-semibold transition-all hover:bg-white/5"><i class="fa-solid fa-chart-pie w-5 text-indigo-400"></i> Dashboard</a></li>
+          <li><a href="admin_users.php" class="sidebar-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-400 text-sm font-semibold transition-all hover:bg-white/5 hover:text-white"><i class="fa-solid fa-users w-5"></i> Manage Users</a></li>
+          <li><a href="admin_feedback.php" class="sidebar-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-400 text-sm font-semibold transition-all hover:bg-white/5 hover:text-white"><i class="fa-solid fa-comments w-5"></i> User Feedback</a></li>
+          <li><a href="admin_upload.php" class="sidebar-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-400 text-sm font-semibold transition-all hover:bg-white/5 hover:text-white"><i class="fa-solid fa-cloud-arrow-up w-5"></i> Upload Content</a></li>
+          <li><a href="admin_user_activity.php" class="sidebar-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-400 text-sm font-semibold transition-all hover:bg-white/5 hover:text-white"><i class="fa-solid fa-clock-rotate-left w-5"></i> Activity Logs</a></li>
+        </ul>
+
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mt-10 mb-4 px-4">System</div>
+        <ul class="space-y-1">
+          <li><a href="admin_logout.php" class="flex items-center gap-3 px-4 py-3.5 rounded-xl text-rose-400 text-sm font-semibold transition-all hover:bg-rose-500/10 hover:text-rose-300"><i class="fa-solid fa-power-off w-5"></i> Sign Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-10 overflow-y-auto">
+      <header class="flex items-center justify-between mb-12">
+        <div>
+          <h1 class="text-4xl font-black text-slate-900 tracking-tight">System Overview</h1>
+          <p class="text-slate-500 mt-1 font-medium flex items-center gap-2">
+            Welcome back, Administrator 
+            <span id="status-badge" class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold uppercase tracking-wider">Syncing...</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 transition-all shadow-sm"><i class="fa-solid fa-bell"></i></button>
+          <div class="flex items-center gap-3 pl-4 border-l border-slate-200">
+            <div class="text-right">
+              <p class="text-sm font-bold text-slate-900 leading-none">Admin User</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase mt-1">Super Admin</p>
+            </div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold">A</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- STATS CARDS -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-users text-8xl"></i>
+          </div>
+          <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-users text-indigo-600 text-xl"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Total Registered Users</h3>
+          <p id="userCount" class="text-5xl font-black text-slate-900 tabular-nums">0</p>
+          <p class="text-xs font-bold text-emerald-500 mt-4 flex items-center gap-1"><i class="fa-solid fa-arrow-up"></i> 12% from last month</p>
+        </div>
+
+        <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-comments text-8xl"></i>
+          </div>
+          <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-comments text-purple-600 text-xl"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Feedback Received</h3>
+          <p id="feedbackCount" class="text-5xl font-black text-slate-900 tabular-nums">0</p>
+          <p class="text-xs font-bold text-emerald-500 mt-4 flex items-center gap-1"><i class="fa-solid fa-arrow-up"></i> 5 new today</p>
+        </div>
+
+        <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-file-pdf text-8xl"></i>
+          </div>
+          <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-file-pdf text-emerald-600 text-xl"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Active Study Notes</h3>
+          <p id="uploadCount" class="text-5xl font-black text-slate-900 tabular-nums">0</p>
+          <p class="text-xs font-bold text-slate-400 mt-4">Verified & Published</p>
+        </div>
+      </section>
+
+      <!-- DATA TABLES -->
+      <section class="bg-white rounded-[32px] border border-slate-200 shadow-sm overflow-hidden">
+        <div class="p-8 border-b border-slate-100 flex items-center justify-between">
+          <div>
+            <h2 class="text-2xl font-black text-slate-900 tracking-tight">Recent Activity Feed</h2>
+            <p class="text-sm text-slate-500 font-medium">Real-time logs of user interactions</p>
+          </div>
+          <button onclick="loadDashboard()" class="px-4 py-2 bg-slate-50 hover:bg-slate-100 rounded-xl text-xs font-bold text-slate-600 transition-all flex items-center gap-2"><i class="fa-solid fa-rotate"></i> Refresh Data</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-slate-50/50">
+                <th class="px-8 py-5 text-left text-[10px] font-bold uppercase tracking-widest text-slate-400">User Details</th>
+                <th class="px-8 py-5 text-left text-[10px] font-bold uppercase tracking-widest text-slate-400">Action Type</th>
+                <th class="px-8 py-5 text-left text-[10px] font-bold uppercase tracking-widest text-slate-400">Timestamp</th>
+                <th class="px-8 py-5 text-right text-[10px] font-bold uppercase tracking-widest text-slate-400">Status</th>
+              </tr>
+            </thead>
+            <tbody id="activityTable" class="divide-y divide-slate-100">
+              <tr><td colspan="4" class="px-8 py-20 text-slate-400 text-center font-medium"><i class="fa-solid fa-circle-notch animate-spin text-2xl mb-2"></i><br>Pulling latest logs...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+  async function loadDashboard() {
+    const badge = document.getElementById('status-badge');
+    try {
+      badge.innerText = 'Syncing...';
+      badge.className = 'px-2 py-0.5 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold uppercase tracking-wider';
+      
+      const response = await fetch('admin.php');
+      const data = await response.json();
+      
+      // Animate numbers
+      animateValue("userCount", 0, data.userCount, 1000);
+      animateValue("feedbackCount", 0, data.feedbackCount, 1000);
+      animateValue("uploadCount", 0, data.uploadCount, 1000);
+
+      const tableBody = document.getElementById('activityTable');
+      tableBody.innerHTML = '';
+
+      if (data.activity && data.activity.length > 0) {
+        data.activity.forEach(row => {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-slate-50/80 transition-colors group';
+          tr.innerHTML = `
+            <td class="px-8 py-6">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all">${row.username.charAt(0).toUpperCase()}</div>
+                <div>
+                  <p class="font-bold text-slate-900 leading-none">${row.username}</p>
+                  <p class="text-[10px] font-bold text-slate-400 uppercase mt-1">ID: #USR-${row.user_id ?? '???'}</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-8 py-6">
+              <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-[10px] font-bold uppercase tracking-wide border border-indigo-100">${row.action}</span>
+            </td>
+            <td class="px-8 py-6 text-sm font-medium text-slate-500">${row.log_time}</td>
+            <td class="px-8 py-6 text-right">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+            </td>
+          `;
+          tableBody.appendChild(tr);
+        });
+      } else {
+        tableBody.innerHTML = '<tr><td colspan="4" class="px-8 py-10 text-slate-400 text-center font-medium">No activity records found in the database.</td></tr>';
+      }
+      
+      badge.innerText = 'Connected';
+      badge.className = 'px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-600 text-[10px] font-bold uppercase tracking-wider';
+    } catch (error) {
+      console.error(error);
+      badge.innerText = 'Sync Error';
+      badge.className = 'px-2 py-0.5 rounded-full bg-rose-100 text-rose-600 text-[10px] font-bold uppercase tracking-wider';
+    }
+  }
+
+  function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  loadDashboard();
+  </script>
 </body>
 </html>
