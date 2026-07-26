@@ -1,4 +1,4 @@
-# Programming Notes & Quiz System
+# Noted : Programming Notes Provider & Quiz System
 
 A full-stack web application developed using **PHP** and **MySQL** that helps students access programming study materials, attempt online quizzes, and track their learning progress. The system also includes an admin panel for managing users, notes, quizzes, and other content.
 
